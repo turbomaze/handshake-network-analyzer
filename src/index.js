@@ -1,4 +1,5 @@
 require('dotenv').config();
+const fs = require('fs');
 const { NodeClient } = require('hs-client');
 const Syncer = require('./syncer');
 
@@ -9,11 +10,12 @@ const clientOptions = {
   apiKey: process.env.API_KEY,
 };
 const nodeClient = new NodeClient(clientOptions);
-const syncer = new Syncer(nodeClient);
+const syncer = new Syncer(nodeClient, { file: process.env.OUTPUT_FILE });
 
 (async () => {
   try {
-    syncer.start();
+    await syncer.start();
+    syncer.dump();
   } catch (e) {
     console.log(e);
   }

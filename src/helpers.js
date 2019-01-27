@@ -9,4 +9,11 @@ function extractOutputAddresses(list) {
   return list.map(_ => _.address).filter(Boolean);
 }
 
-module.exports = { extractInputAddresses, extractOutputAddresses };
+function replaceSetsWithArrays(adjacencyList) {
+  Object.keys(adjacencyList).forEach(address => {
+    adjacencyList[address] = Array.from(adjacencyList[address]);
+  });
+  return adjacencyList;
+}
+
+module.exports = { extractInputAddresses, extractOutputAddresses, replaceSetsWithArrays };
