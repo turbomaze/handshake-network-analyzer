@@ -22,6 +22,10 @@ const nodes = Array.from(rawNodes).map(address => {
   return {
     id: address,
     label: address,
+    x: 1 * Math.random(),
+    y: 1 * Math.random(),
+    size: 3,
+    color: '#ff0000',
   };
 });
 
@@ -31,10 +35,6 @@ const edges = rawEdges.map(([source, destination]) => {
     id: `${source}-${destination}`,
     source,
     target: destination,
-    x: 100 * Math.random(),
-    y: 100 * Math.random(),
-    size: 3,
-    color: '#ff0000',
   };
 });
 

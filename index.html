@@ -2,8 +2,8 @@
 <head>
   <style type="text/css">
     #container {
-      max-width: 400px;
-      height: 400px;
+      max-width: 960px;
+      height: 600px;
       margin: auto;
     }
   </style>
@@ -16,10 +16,8 @@
   <script src="/assets/js/vendor/sigma/plugins/sigma.layout.forceAtlas2.min.js"></script>
   <script src="/build/graph.json"></script>
   <script>
-    const sigmaGraph = new sigma.classes.graph();
-    const graph = sigmaGraph.read(data);
-    const s = new sigma({graph, container: 'container'})
-    // s.startForceAtlas2({worker: true, barnesHutOptimize: false});
+    const s = new sigma({graph: data, container: 'container'})
+    s.startForceAtlas2({worker: true, barnesHutOptimize: false});
   </script>
   </body>
 </html>
