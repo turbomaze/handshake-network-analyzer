@@ -13,6 +13,12 @@ cp .env.config .env
 
 # sync all transactions to build the graph
 npm run sync
+
+# convert the raw graph into sigma.js format for rendering
+npm run build
+
+# serve the index.html file to view the graph
+npm run start
 ```
 
 ## License
