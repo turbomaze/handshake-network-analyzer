@@ -1,0 +1,25 @@
+<html>
+<head>
+  <style type="text/css">
+    #container {
+      max-width: 400px;
+      height: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="/assets/js/vendor/sigma/sigma.min.js"></script>
+  <script src="/assets/js/vendor/sigma/plugins/sigma.parsers.json.min.js"></script>
+  <script src="/assets/js/vendor/sigma/plugins/sigma.layout.forceAtlas2.min.js"></script>
+  <script src="/build/graph.json"></script>
+  <script>
+    const sigmaGraph = new sigma.classes.graph();
+    const graph = sigmaGraph.read(data);
+    const s = new sigma({graph, container: 'container'})
+    // s.startForceAtlas2({worker: true, barnesHutOptimize: false});
+  </script>
+  </body>
+</html>

@@ -4,7 +4,9 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "sync": "node ./src/index"
+    "start": "python -m SimpleHTTPServer",
+    "sync": "node ./src/index",
+    "build": "node ./scripts/build"
   },
   "author": "Anthony Liu",
   "license": "MIT",

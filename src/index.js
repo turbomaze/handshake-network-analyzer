@@ -1,5 +1,4 @@
 require('dotenv').config();
-const fs = require('fs');
 const { NodeClient } = require('hs-client');
 const Syncer = require('./syncer');
 
