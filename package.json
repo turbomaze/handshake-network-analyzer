@@ -1,0 +1,15 @@
+{
+  "name": "handshake-network-analysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "sync": "node ./src/index"
+  },
+  "author": "Anthony Liu",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "hs-client": "0.0.5"
+  }
+}
