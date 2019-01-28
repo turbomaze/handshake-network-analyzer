@@ -38,8 +38,7 @@ class Syncer {
   }
 
   async syncTx(adjacencyList, tx) {
-    const rawInputs = helpers.extractInputAddresses(tx.inputs);
-    const inputs = rawInputs.length === 0 ? [Syncer.COINBASE] : rawInputs;
+    const inputs = helpers.extractInputAddresses(tx.inputs);
     const outputs = helpers.extractOutputAddresses(tx.outputs);
     inputs.forEach(input => {
       if (!(input in adjacencyList)) {
@@ -52,7 +51,5 @@ class Syncer {
     });
   }
 }
-
-Syncer.COINBASE = 'COINBASE';
 
 module.exports = Syncer;

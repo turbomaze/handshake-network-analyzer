@@ -24,7 +24,7 @@ const nodes = Array.from(rawNodes).map(address => {
     label: address,
     x: 1 * Math.random(),
     y: 1 * Math.random(),
-    size: 3,
+    size: 1,
     color: '#ff0000',
   };
 });
