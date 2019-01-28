@@ -40,4 +40,8 @@ const edges = rawEdges.map(([source, destination]) => {
 
 // emit the clean graph
 const graph = { nodes, edges };
-fs.writeFileSync(buildFile, 'const data=' + JSON.stringify(graph) + ';');
+fs.writeFileSync(
+  buildFile,
+  `const rawData=${data};
+const data=${JSON.stringify(graph)};`
+);
