@@ -3,6 +3,8 @@ Handshake Network Analyzer
 
 Use this tool to analyze the movement of funds on the Handshake network.
 
+Link: https://turbomaze.github.io/handshake-network-analyzer/
+
 ## Development
 
 You need to provide the connection details for a Handshake RPC server in the `.env` file.
