@@ -1,23 +1,45 @@
 <html>
 <head>
   <style type="text/css">
+    * {
+      font-family: sans-serif;
+    }
+
     #container {
-      max-width: 960px;
-      height: 600px;
-      margin: auto;
+      max-width: 800px;
+      height: 500px;
+      flex: 4;
     }
   </style>
 </head>
 <body>
-  <div id="container"></div>
+  <div style="display: flex; margin: 40px 32px 0;">
+    <div style="flex: 1;">
+      <h2>Handshake Network Analyzer</h2>
+
+      <p>Enter in an address to explore the addresses that paid it coins, and the addresses it paid coins to.</p>
+
+      <input id="address" type="text" placeholder="Search address" />
+      <button id="submit">Submit</button>
+
+      <br />
+      <br />
+
+      <small>Real data from Handshake Testnet 3.</small>
+
+      <br />
+      <br />
+
+      <small><a href="https://github.com/turbomaze/handshake-network-analyzer">Fork me on Github</a></small>
+    </div>
+
+    <div id="container"></div>
+  </div>
 
   <script src="/assets/js/vendor/sigma/sigma.min.js"></script>
   <script src="/assets/js/vendor/sigma/plugins/sigma.parsers.json.min.js"></script>
   <script src="/assets/js/vendor/sigma/plugins/sigma.layout.forceAtlas2.min.js"></script>
   <script src="/build/graph.json"></script>
-  <script>
-    const s = new sigma({graph: data, container: 'container'})
-    s.startForceAtlas2({worker: true, barnesHutOptimize: true});
-  </script>
+  <script src="/assets/js/index.js"></script>
   </body>
 </html>
